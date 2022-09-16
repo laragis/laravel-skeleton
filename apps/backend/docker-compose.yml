@@ -8,6 +8,7 @@ services:
             args:
                 WWWGROUP: '${WWWGROUP}'
         image: ttungbmt/sail:8.1
+        working_dir: /var/www/apps/backend
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
