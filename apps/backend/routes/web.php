@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/user', function (){
+   return [
+       'data' => auth()->user()
+   ];
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -26,3 +32,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+require __DIR__.'/auth.php';
