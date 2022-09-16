@@ -1,7 +1,7 @@
 # For more information: https://laravel.com/docs/sail
 version: '3'
 services:
-    laravel-app.local:
+    backend:
         build:
             context: ./vendor/laravel/sail/runtimes/8.1
             dockerfile: Dockerfile
@@ -19,7 +19,9 @@ services:
             XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
             XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
         volumes:
-            - '.:/var/www/html'
+            - ./docker/8.1/start-container:/usr/local/bin/start-container
+            - ./docker/8.1/supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+            - '../../:/var/www'
         networks:
             - sail
         depends_on:
