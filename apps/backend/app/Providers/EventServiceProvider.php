@@ -18,6 +18,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            \TungTT\LaravelSocialite\GeoNode\GeoNodeExtendSocialite::class.'@handle',
+        ],
     ];
 
     /**

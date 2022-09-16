@@ -31,4 +31,45 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'geonode' => [
+        'client_id' => env('GEONODE_CLIENT_ID'),
+        'client_secret' => env('GEONODE_CLIENT_SECRET'),
+        'redirect' => env('APP_URL').'/oauth/geonode/callback',
+    ],
+
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => env('APP_URL').'/oauth/google/callback',
+    ],
+
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => env('APP_URL').'/oauth/facebook/callback',
+    ],
+
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => env('APP_URL').'/oauth/twitter/callback',
+    ],
+
+    'arcgis' => [
+        'client_id' => env('ARCGIS_CLIENT_ID'),
+        'client_secret' => env('ARCGIS_CLIENT_SECRET'),
+        'redirect' => env('APP_URL').'/arcgis/geonode/callback',
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect' => env('APP_URL').'/oauth/github/callback',
+    ],
+
+    'envato' => [
+        'client_id' => env('ENVATO_CLIENT_ID'),
+        'client_secret' => env('ENVATO_CLIENT_SECRET'),
+        'redirect' => env('APP_URL').'/oauth/envato/callback',
+    ],
 ];

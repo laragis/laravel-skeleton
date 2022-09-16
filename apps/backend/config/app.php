@@ -198,6 +198,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        App\Providers\SocialstreamServiceProvider::class,
 
     ],
 
@@ -216,4 +217,5 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'domain' => env('APP_DOMAIN', 'laravel.com'),
 ];
